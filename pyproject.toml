@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sprout30ke-saturate"
+version = "0.1.0"
+description = "按召回数量分档统计命中覆盖，测算边际收益何时降到阈值以下"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "sprout30ke" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://sprout30ke.github.io"
+Repository = "https://github.com/sprout30ke/saturate"
+Issues = "https://github.com/sprout30ke/saturate/issues"
+
+[project.scripts]
+saturate = "saturate:main"
+
+[tool.setuptools]
+py-modules = ["saturate"]
